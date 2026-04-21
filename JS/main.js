@@ -193,7 +193,7 @@ btnChange.addEventListener("mouseleave", () => {
 //& Animation Button Icon
 
 //^ Loading First Recipe after Page Loadion
-
+var randomIndex = Math.floor(Math.random() * recipes.length);
 getRecipe(recipes[randomIndex]);
 
 //& End Loading First Recipe after Page Loadion
