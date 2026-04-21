@@ -1,0 +1,294 @@
+/*****? Global *****/
+/*****^ Variable *****/
+:root {
+  --main-color: #f97316;
+  --main-bg-color: #fff9ec;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+.custom-scroll {
+  overflow-y: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #fe886a4d;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #b46653;
+}
+
+.custom-scroll.arrows {
+  scrollbar-width: thin;
+  scrollbar-color: #fe886a4d transparent;
+}
+
+/*****& End Variable *****/
+
+/*****& End Global *****/
+
+/*****? NavBar *****/
+
+nav {
+  height: 100px !important;
+  border-bottom: 3px solid #f1eadf;
+}
+nav .container-fluid .logo i {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--main-color),
+    #ef4444
+  );
+  width: 50px;
+  height: 50px;
+}
+
+nav .container-fluid .desc h3 {
+  font-size: 24px !important;
+}
+
+nav .container-fluid ul li:hover {
+  cursor: pointer;
+}
+nav .container-fluid ul li i,
+nav .container-fluid ul li span {
+  transition: all 0.2s ease;
+}
+nav .container-fluid ul li:hover i,
+nav .container-fluid ul li:hover span {
+  color: var(--main-color) !important;
+}
+
+nav .container-fluid .user-image img {
+  width: 40px;
+  height: 40px;
+  border-color: var(--main-color) !important;
+}
+
+nav .navbar-toggler {
+  transition: all 0.1s ease;
+}
+
+nav .navbar-toggler:hover {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+nav .navbar-toggler:focus,
+nav .navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/*****& End NavBar *****/
+
+/*****? Main *****/
+main {
+  background-color: var(--main-bg-color);
+}
+
+main section {
+  max-height: 800px;
+  box-shadow: 0 10px 15px -10px #00000060;
+  border: 0.5px solid #fe886a4d;
+  max-width: 100% !important;
+  width: 80% !important;
+  overflow-x: hidden;
+}
+
+main section .row .left .rate {
+  top: 5%;
+  left: 3%;
+}
+
+main section .row .left .props {
+  width: 80% !important;
+  bottom: 9%;
+  left: 8%;
+}
+
+main section .row .left .props .prop {
+  width: 50%;
+}
+
+main section .row .left .fa-clock {
+  color: var(--main-color);
+}
+main section .row .left .fa-fire-burner {
+  color: red;
+}
+main section .row .right {
+  max-width: 100%;
+}
+main section .row .right .meal-title .title,
+main section .row .right .meal-title .desc {
+  max-width: 600px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main section .row .right .meal-title .desc {
+  max-width: 400px;
+}
+main section .row .right .meal-title .action {
+  background-color: #ffedd5;
+  color: #ea580c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main section .row .right .meal-title .action:hover {
+  background-color: #ffd6a7;
+}
+main section .row .right .prep-alert {
+  background-color: #fef2f2;
+}
+main section .row .right .prep-alert .alert-message {
+  color: #9f0712;
+}
+
+main section .row .right ul {
+  padding: 15px 0;
+}
+main section .row .right ul li button {
+  border: none !important;
+}
+main section .row .right ul li button.active {
+  color: var(--main-color) !important;
+  border-bottom: 2px solid var(--main-color) !important;
+  background-color: transparent;
+}
+main section .row .right ul li:hover button:not(button.active) {
+  color: #364153 !important;
+}
+
+main section .row .right .tab-content #ingredients-tab-pane,
+main section .row .right .tab-content #instructions-tab-pane,
+main section .row .right .tab-content #nutrition-tab-pane,
+main section .row .right .tab-content #chief-tab-pane {
+  max-height: 300px;
+}
+
+main section .row .right .tab-content #ingredients-tab-pane {
+  background-color: var(--main-bg-color);
+}
+
+main section .row .right .tab-content #ingredients-tab-pane ul .ingredient-num {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--main-color);
+}
+
+main
+  section
+  .row
+  .right
+  .tab-content
+  #instructions-tab-pane
+  ul
+  .instructions-num {
+  width: 60px;
+  height: 55px;
+  border-radius: 30%;
+  background: var(--main-color);
+}
+main section .row .right .tab-content #nutrition-tab-pane .row .inner {
+  background-color: #f9fafb;
+}
+
+main section .row .right .tab-content #nutrition-tab-pane .nutrition-icon {
+  width: 30px;
+  height: 30px;
+}
+main section .row .right .tab-content #nutrition-tab-pane .nutrition-icon.fire {
+  background-color: #ffedd4;
+}
+main
+  section
+  .row
+  .right
+  .tab-content
+  #nutrition-tab-pane
+  .nutrition-icon.dumbbell {
+  background-color: #dbeafe;
+}
+main
+  section
+  .row
+  .right
+  .tab-content
+  #nutrition-tab-pane
+  .nutrition-icon.wheat-awn {
+  background-color: #fef9c2;
+}
+main
+  section
+  .row
+  .right
+  .tab-content
+  #nutrition-tab-pane
+  .nutrition-icon.droplet {
+  background-color: #ffe2e2;
+}
+main
+  section
+  .row
+  .right
+  .tab-content
+  #nutrition-tab-pane
+  .nutrition-icon.seedling {
+  background-color: #dbfce7;
+}
+main section .row .right .tab-content #nutrition-tab-pane .nutrition-icon.cube {
+  background-color: #fce7f3;
+}
+main
+  section
+  .row
+  .right
+  .tab-content
+  #nutrition-tab-pane
+  .nutrition-icon.cube
+  i {
+  color: #e60076;
+}
+
+main section .row .right .tab-content #chief-tab-pane .tip-note {
+  background-color: #fffbeb;
+}
+main section .row .right .tab-content #chief-tab-pane .tip-icon i {
+  color: #e17100;
+}
+
+main section .row .right .btn-action button {
+  background-image: linear-gradient(to right, #f97316, #ef4444);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:
+    background-image 0.4s ease,
+    transform 0.2s ease;
+}
+main section .row .right .btn-action button:hover {
+  background-image: linear-gradient(to right, #ea580c, #dc2626);
+  transform: scale(1.1);
+}
+
+/*****& End Main *****/

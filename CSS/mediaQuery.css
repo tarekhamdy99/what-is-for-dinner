@@ -1,0 +1,178 @@
+@media screen and (width < 1025px) {
+  .custom-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*? NavBar Responsive*/
+
+@media screen and (width < 768px) {
+  .custom-navbar {
+    position: relative;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: white;
+  }
+}
+@media screen and (width < 400px) {
+  nav .container-fluid {
+    padding-inline: 0 !important;
+  }
+  nav .container-fluid .logo i {
+    width: 30px;
+    height: 30px;
+    font-size: 10px !important;
+  }
+  nav .container-fluid .desc h3 {
+    font-size: 15px !important;
+  }
+  nav .container-fluid .desc p {
+    font-size: 10px !important;
+  }
+  .meal-title .action {
+    padding-block: 10px !important;
+    padding-inline: 15px !important;
+  }
+}
+
+/*? Main Section Responsive*/
+
+@media screen and (width < 576px) {
+  main section {
+    max-height: 1000px;
+  }
+  main section .row .left .meal-image {
+    padding: 0 !important;
+  }
+  main section .row .left img {
+    border-radius: 20px 20px 0 0 !important ;
+  }
+  main section .row .left img {
+    border-radius: 20px 20px 0 0 !important ;
+  }
+  main section .row .left .props {
+    width: 80% !important;
+    height: 20%;
+  }
+  main section .row .left .props .prop {
+    padding-inline: 10px !important;
+    width: 50%;
+  }
+  main section .row .left .props .prop i {
+    margin-bottom: 3px !important;
+  }
+  main section .row .left .props .prop p {
+    font-size: 8px !important;
+  }
+  main section .row .right {
+    max-width: 100 !important;
+    padding: 10px !important;
+  }
+  main section .row .right {
+    max-width: 100 !important;
+    padding: 10px !important;
+  }
+
+  #title,
+  #desc {
+    width: 200px;
+  }
+  #title {
+    font-size: 20px !important;
+  }
+  #desc {
+    font-size: 15px !important;
+  }
+  .prep-alert {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    padding: 5px !important;
+  }
+  .prep-alert i {
+    font-size: 15px !important;
+  }
+  .prep-alert h3 {
+    font-size: 13px !important;
+  }
+  .prep-alert p {
+    font-size: 10px !important;
+  }
+
+  .nav.nav-tabs {
+    padding-block: 4px !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .nav.nav-tabs li {
+    width: 48% !important;
+  }
+  main
+    section
+    .row
+    .right
+    .tab-content
+    #instructions-tab-pane
+    ul
+    .instructions-num {
+    min-width: 60px;
+  }
+  .nav.nav-tabs li.chief span {
+    font-size: 1px !important;
+  }
+  .own-space,
+  #ingredients-list,
+  .btn-action {
+    padding-block: 5px !important;
+    margin-block: 5px !important;
+  }
+  .btn-action button {
+    padding: 10px !important;
+  }
+  .btn-action button:hover {
+    transform: scale(1.05) !important;
+  }
+}
+
+@media screen and (width < 768px) {
+  main section .row .right .meal-title .title,
+  main section .row .right .meal-title .desc {
+    max-width: 350px;
+  }
+  .nav.nav-tabs {
+    justify-content: center !important;
+    gap: 20px;
+  }
+  .nav.nav-tabs li {
+    width: 20% !important;
+  }
+  .nav.nav-tabs li.chief span {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (width >= 576px) and (width <=835px) {
+  main section .row .right .meal-title .title,
+  main section .row .right .meal-title .desc {
+    max-width: 250px;
+  }
+}
+@media screen and (width >= 992px) and (width <=1400px) {
+  main section .row .right .meal-title .title,
+  main section .row .right .meal-title .desc {
+    max-width: 250px;
+  }
+}
+
+@media screen and (width <= 300px) {
+  .meal-title {
+    flex-flow: column;
+    gap: 10px !important;
+  }
+}
