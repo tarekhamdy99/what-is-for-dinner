@@ -14,6 +14,7 @@ var levelDifficulty = document.getElementById("recipe-level");
 var category = document.getElementById("recipe-type");
 var recipeName = document.getElementById("title");
 var recipeCategory = document.getElementById("desc");
+var cooktimeAlert = document.getElementById("prep-alert");
 var ingredientList = document.getElementById("ingredients-list");
 var instructionsList = document.getElementById("instructions-list");
 var caloriesValue = document.getElementById("calories-value");
@@ -33,15 +34,15 @@ var btnIcon = document.querySelector("#change-btn i");
 function getRecipe(recipe) {
   //^ Main data
   image.src = recipe.image;
-  rate.innerText = recipe.reviewRate;
-  count.innerText = `(${recipe.reviewCount} reviews)`;
-  prepTime.innerText = `${recipe.prepTime} min`;
-  cookTime.innerText = `${recipe.cookTime} min`;
-  servingCount.innerText = `${recipe.servings} people`;
-  recipeName.innerText = recipe.title;
-  recipeCategory.innerText = recipe.description;
-  levelDifficulty.innerText = recipe.level;
-  category.innerText = recipe.type;
+  rate.innerHTML = recipe.reviewRate;
+  count.innerHTML = `(${recipe.reviewCount} reviews)`;
+  prepTime.innerHTML = `${recipe.prepTime} min`;
+  cookTime.innerHTML = `${recipe.cookTime} min`;
+  servingCount.innerHTML = `${recipe.servings} people`;
+  recipeName.innerHTML = recipe.title;
+  recipeCategory.innerHTML = recipe.description;
+  levelDifficulty.innerHTML = recipe.level;
+  category.innerHTML = recipe.type;
 
   //^ Ingredients
 
@@ -68,20 +69,19 @@ function getRecipe(recipe) {
                                           <li class="d-flex justify-content-start align-items-center gap-3">
                       <p id="instructions-num"
                         class="instructions-num fs-4 fw-bolder d-flex justify-content-center align-items-center text-white">
-                       ${num}</p>
+                        ${num}</p>
                       <p id="instructions-details" class="text-dark text-opacity-75 fs-6">${recipe.instructions[i]}</p>
                     </li>
     `;
   }
 
   //^ Nutrition
-
-  caloriesValue.innerText = recipe.nutrition.caloriesValue;
-  proteinValue.innerText = `${recipe.nutrition.proteinValue}g`;
-  carbohydratesValue.innerText = `${recipe.nutrition.carbohydratesValue}g`;
-  fatValue.innerText = `${recipe.nutrition.fatValue}g`;
-  fiberValue.innerText = `${recipe.nutrition.fiberValue}g`;
-  sodiumValue.innerText = `${recipe.nutrition.sodium}mg`;
+  caloriesValue.innerHTML = recipe.nutrition.caloriesValue;
+  proteinValue.innerHTML = `${recipe.nutrition.proteinValue}g`;
+  carbohydratesValue.innerHTML = `${recipe.nutrition.carbohydratesValue}g`;
+  fatValue.innerHTML = `${recipe.nutrition.fatValue}g`;
+  fiberValue.innerHTML = `${recipe.nutrition.fiberValue}g`;
+  sodiumValue.innerHTML = `${recipe.nutrition.sodium}mg`;
 
   //^ Chief Tips
 
@@ -105,16 +105,14 @@ function getRecipe(recipe) {
   //^ Alert Message
 
   if (recipe.cookTime > 45) {
-    var cooktimeAlert = document.getElementById("prep-alert");
     cooktimeAlert.classList.remove("opacity-0");
   } else {
-    var cooktimeAlert = document.getElementById("prep-alert");
     cooktimeAlert.classList.add("opacity-0");
   }
 
   //^ Back Ground color Of Meal Type Exchange
 
-  var level = levelDifficulty.innerText.trim().toLowerCase();
+  var level = levelDifficulty.innerHTML.trim().toLowerCase();
   switch (level) {
     case "easy":
     case "intermediate":
@@ -136,7 +134,7 @@ function getRecipe(recipe) {
 
   //^ Back Ground color Of Meal Type Exchange
 
-  var type = category.innerText.trim().toLowerCase();
+  var type = category.innerHTML.trim().toLowerCase();
   switch (type) {
     case "vegetarian":
     case "salad":
