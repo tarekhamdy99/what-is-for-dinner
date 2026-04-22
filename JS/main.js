@@ -14,7 +14,6 @@ var levelDifficulty = document.getElementById("recipe-level");
 var category = document.getElementById("recipe-type");
 var recipeName = document.getElementById("title");
 var recipeCategory = document.getElementById("desc");
-var cooktimeAlert = document.getElementById("prep-alert");
 var ingredientList = document.getElementById("ingredients-list");
 var instructionsList = document.getElementById("instructions-list");
 var caloriesValue = document.getElementById("calories-value");
@@ -103,7 +102,7 @@ function getRecipe(recipe) {
   }
 
   //^ Alert Message
-
+  var cooktimeAlert = document.getElementById("prep-alert");
   if (recipe.cookTime > 45) {
     cooktimeAlert.classList.remove("opacity-0");
   } else {
