@@ -75,7 +75,7 @@ function getRecipe(recipe) {
   }
 
   //^ Nutrition
-  caloriesValue.innerHTML = recipe.nutrition.caloriesValue;
+  caloriesValue.innerHTML = `${recipe.nutrition.caloriesValue} Kcal`;
   proteinValue.innerHTML = `${recipe.nutrition.proteinValue}g`;
   carbohydratesValue.innerHTML = `${recipe.nutrition.carbohydratesValue}g`;
   fatValue.innerHTML = `${recipe.nutrition.fatValue}g`;
