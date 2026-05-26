@@ -169,9 +169,21 @@ function getRecipe(recipe) {
 
 //& End Get Recipe Function
 
-//^ Button Functions
+//^ Loading First Recipe after Page Loadion
+var randomIndex = Math.floor(Math.random() * recipes.length);
+getRecipe(recipes[randomIndex]);
 
+//& End Loading First Recipe after Page Loadion
+
+//^ Button Functions
+var oldIndex = randomIndex;
 function onClickchange() {
+  do {
+    randomIndex = Math.floor(Math.random() * recipes.length);
+  } while (randomIndex === oldIndex);
+
+  oldIndex = randomIndex;
+
   getRecipe(recipes[randomIndex]);
 }
 
@@ -188,9 +200,3 @@ btnChange.addEventListener("mouseleave", () => {
 });
 
 //& Animation Button Icon
-
-//^ Loading First Recipe after Page Loadion
-var randomIndex = Math.floor(Math.random() * recipes.length);
-getRecipe(recipes[randomIndex]);
-
-//& End Loading First Recipe after Page Loadion
