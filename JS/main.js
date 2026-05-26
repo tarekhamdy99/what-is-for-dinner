@@ -109,7 +109,7 @@ function getRecipe(recipe) {
     cooktimeAlert.classList.add("opacity-0");
   }
 
-  //^ Back Ground color Of Meal Type Exchange
+  //^ Back Ground color Of Meal Level Difficulty Exchange
 
   var level = levelDifficulty.innerHTML.trim().toLowerCase();
   switch (level) {
