@@ -1,32 +1,30 @@
-name: My First CI/CD Pipeline
+name: Simple HTML CI/CD
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: "20"
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
-      - name: Build Project
-        run: npm run build
+          path: "."
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: build
-          branch: gh-pages
+        uses: actions/deploy-pages@v4
