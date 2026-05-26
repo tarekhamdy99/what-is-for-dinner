@@ -199,4 +199,4 @@ btnChange.addEventListener("mouseleave", () => {
   btnIcon.classList.remove("fa-spin");
 });
 
-//& Animation Button Icon
+//& End Animation Button Icon
